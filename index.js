@@ -8,7 +8,7 @@ const userRouter = require('./src/routers/user');
 const authRouter = require('./src/routers/auth');
 
 const app = express();
-const port = process.env.PORT || 9001;
+const port = process.env.SERVER_PORT || 9000;
 
 app.use(bodyparser.urlencoded({
     extended: true
