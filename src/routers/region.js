@@ -30,7 +30,19 @@ router.post('/region', async(req, res) => {
 router.get('/', async(req, res) => {
     try {
         const region = await Region.find();
-        res.send(region);
+
+        // region.forEach((reg)=>{
+        //      const myid = reg.id;
+        //      District.find({region_id:myid}, function(err, count){
+        //         console.log(myid);
+        //         const counter = count.length;
+        //         console.log(counter);
+        //     });
+            
+        // });
+        
+        await res.status(200).send(region);
+        
     } catch (err) {
         res.status(404).send(err);
     }
