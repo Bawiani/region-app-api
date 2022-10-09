@@ -39,6 +39,7 @@ router.get("/regions", async (req, res) => {
   } catch (err) {
     res.status(404).send(err);
   }
+
 });
 
 // Get region by ID
